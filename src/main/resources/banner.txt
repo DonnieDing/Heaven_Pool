@@ -6,5 +6,7 @@
 * //    / / //       //   / /  || / / //       //   / / //       //   / / //   / / //   *
 *//    / / ((____   ((___( (   ||/ / ((____   //   / / //       ((___/ / ((___/ / //    *
 *****************************************************************************************
+
+Application  Author: ${heavenpool.author}
 Application Version: ${heavenpool.version}
 Spring Boot Version: ${spring-boot.version}

@@ -2,8 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    <classPathEntry
-            location="C:\Users\Dcl_Snow\.m2\repository\mysql\mysql-connector-java\8.0.20\mysql-connector-java-8.0.20.jar"/>
+    <classPathEntry location="C:\Users\Dcl_Snow\.m2\repository\mysql\mysql-connector-java\8.0.20\mysql-connector-java-8.0.20.jar"/>
     <context id="tts2" targetRuntime="Mybatis3">
         <!-- 生成的Java文件的编码 -->
         <property name="javaFileEncoding" value="utf-8"/>
@@ -23,14 +22,14 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapping" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mybatis" targetProject="src/main/resources">
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="org.snow.dcl.heavenpool.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table catalog="heavenpool" tableName="sys_user" domainObjectName="SysUser" enableCountByExample="false"
+        <table tableName="sys_user" domainObjectName="SysUser" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
