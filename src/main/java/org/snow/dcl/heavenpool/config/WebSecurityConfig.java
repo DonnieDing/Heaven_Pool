@@ -6,6 +6,8 @@
  */
 package org.snow.dcl.heavenpool.config;
 
+import org.snow.dcl.heavenpool.handler.FailureAuthenticationHandler;
+import org.snow.dcl.heavenpool.handler.SuccessAuthenticationHandler;
 import org.snow.dcl.heavenpool.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +28,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    private FailureAuthenticationHandler failureAuthenticationHandler;
+
+    @Autowired
+    private SuccessAuthenticationHandler successAuthenticationHandler;
 
     @Autowired
     private MyUserDetailsService userDetailsService;
@@ -41,13 +48,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/api/**").hasRole("ADMIN")
                 .antMatchers("/user/api/**").hasRole("USER")
                 .antMatchers("/app/api/**").anonymous()
-                .antMatchers("/css/**","/img/**").permitAll()
+                .antMatchers("/*.html","/**/*.html","/**/*.css","/**/*.js").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login.html")
-                .permitAll()
+                .loginProcessingUrl("/dologin")
+//                .successForwardUrl("/admin/api/hello")
+//                .failureHandler(failureAuthenticationHandler)
+//                .successHandler(successAuthenticationHandler)
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
