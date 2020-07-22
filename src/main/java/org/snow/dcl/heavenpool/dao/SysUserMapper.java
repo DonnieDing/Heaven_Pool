@@ -13,9 +13,5 @@ public interface SysUserMapper {
 
     int updateByPrimaryKeySelective(SysUser record);
 
-    int updateByPrimaryKeyWithBLOBs(SysUser record);
-
     int updateByPrimaryKey(SysUser record);
-
-    SysUser findByUserName(String username);
 }

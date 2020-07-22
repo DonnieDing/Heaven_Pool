@@ -6,36 +6,29 @@
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="enable" jdbcType="TINYINT" property="enable" />
-  </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="org.snow.dcl.heavenpool.domain.SysUser">
-    <result column="roles" jdbcType="LONGVARCHAR" property="roles" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, username, password, enable
+    id, username, password, enable, remark
   </sql>
-  <sql id="Blob_Column_List">
-    roles
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from heavenpool..sys_user
+    from sys_user
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from heavenpool..sys_user
+    delete from sys_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
-    insert into heavenpool..sys_user (id, username, password, 
-      enable, roles)
+    insert into sys_user (id, username, password, 
+      enable, remark)
     values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{enable,jdbcType=TINYINT}, #{roles,jdbcType=LONGVARCHAR})
+      #{enable,jdbcType=TINYINT}, #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
-    insert into heavenpool..sys_user
+    insert into sys_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -49,8 +42,8 @@
       <if test="enable != null">
         enable,
       </if>
-      <if test="roles != null">
-        roles,
+      <if test="remark != null">
+        remark,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -66,13 +59,13 @@
       <if test="enable != null">
         #{enable,jdbcType=TINYINT},
       </if>
-      <if test="roles != null">
-        #{roles,jdbcType=LONGVARCHAR},
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
-    update heavenpool..sys_user
+    update sys_user
     <set>
       <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
@@ -83,33 +76,18 @@
       <if test="enable != null">
         enable = #{enable,jdbcType=TINYINT},
       </if>
-      <if test="roles != null">
-        roles = #{roles,jdbcType=LONGVARCHAR},
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
-    update heavenpool..sys_user
+  <update id="updateByPrimaryKey" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
+    update sys_user
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       enable = #{enable,jdbcType=TINYINT},
-      roles = #{roles,jdbcType=LONGVARCHAR}
+      remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.snow.dcl.heavenpool.domain.SysUser">
-    update heavenpool..sys_user
-    set username = #{username,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      enable = #{enable,jdbcType=TINYINT}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-    <select id="findByUserName" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
-        select
-        <include refid="Base_Column_List" />
-        ,
-        <include refid="Blob_Column_List" />
-        from sys_user
-        where username = #{username,jdbcType=VARCHAR}
-    </select>
 </mapper>

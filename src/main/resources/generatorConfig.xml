@@ -15,6 +15,8 @@
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/heavenpool?serverTimezone=Asia/Shanghai"
                         userId="root" password="Password@123">
+            <!-- 解决会连接到其他数据库的同名表 -->
+            <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="org.snow.dcl.heavenpool.domain" targetProject="src/main/java">
@@ -30,6 +32,24 @@
         </javaClientGenerator>
 
         <table tableName="sys_user" domainObjectName="SysUser" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_role" domainObjectName="SysRole" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_api" domainObjectName="SysApi" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_resources" domainObjectName="SysResources" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_user_role" domainObjectName="SysUserRole" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_role_api" domainObjectName="SysUserApi" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="sys_role_resources" domainObjectName="SysUserResources" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
