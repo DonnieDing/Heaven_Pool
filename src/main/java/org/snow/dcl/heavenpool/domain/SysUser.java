@@ -1,7 +1,9 @@
 package org.snow.dcl.heavenpool.domain;
 
+import java.util.List;
+
 public class SysUser {
-    private Long id;
+    private Integer id;
 
     private String username;
 
@@ -11,11 +13,13 @@ public class SysUser {
 
     private String remark;
 
-    public Long getId() {
+    private List<SysRole> roles;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -49,5 +53,13 @@ public class SysUser {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public List<SysRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SysRole> roles) {
+        this.roles = roles;
     }
 }

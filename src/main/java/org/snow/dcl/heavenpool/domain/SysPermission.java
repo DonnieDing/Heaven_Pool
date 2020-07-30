@@ -1,17 +1,15 @@
 package org.snow.dcl.heavenpool.domain;
 
-public class SysResources {
+public class SysPermission {
     private Integer id;
 
-    private String name;
+    private String permissionName;
 
     private String uri;
 
     private Integer pid;
 
-    private Integer sort;
-
-    private String remark;
+    private String description;
 
     public Integer getId() {
         return id;
@@ -21,12 +19,12 @@ public class SysResources {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPermissionName() {
+        return permissionName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setPermissionName(String permissionName) {
+        this.permissionName = permissionName == null ? null : permissionName.trim();
     }
 
     public String getUri() {
@@ -45,19 +43,12 @@ public class SysResources {
         this.pid = pid;
     }
 
-    public Integer getSort() {
-        return sort;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSort(Integer sort) {
-        this.sort = sort;
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
     }
 
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
 }

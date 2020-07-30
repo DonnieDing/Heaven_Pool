@@ -76,6 +76,9 @@ mybatis:
     typeAliasesPackage: org.snow.dcl.heavenpool.domain
     # 配置mapper的扫描，找到所有的mapper.xml映射文件
     mapperLocations: classpath*:mybatis/*Mapper.xml
+    configuration:
+      map-underscore-to-camel-case:
+        true
 
 # 日志配置
 logging:

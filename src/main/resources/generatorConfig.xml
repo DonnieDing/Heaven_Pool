@@ -31,25 +31,28 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="sys_user" domainObjectName="SysUser" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_role" domainObjectName="SysRole" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_api" domainObjectName="SysApi" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_resources" domainObjectName="SysResources" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_user_role" domainObjectName="SysUserRole" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_role_api" domainObjectName="SysUserApi" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="sys_role_resources" domainObjectName="SysUserResources" enableCountByExample="false"
+        <!--<table tableName="sys_user" domainObjectName="SysUser" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_role" domainObjectName="SysRole" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_api" domainObjectName="SysApi" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_resources" domainObjectName="SysResources" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_user_role" domainObjectName="SysUserRole" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_role_api" domainObjectName="SysUserApi" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="sys_role_resources" domainObjectName="SysUserResources" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <table tableName="sys_permission" domainObjectName="SysPermission" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
