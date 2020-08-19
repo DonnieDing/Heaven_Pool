@@ -32,7 +32,7 @@ HeavenPool是使用SpringBoot开发的后台管理系统，基于Spring Security
 
 ## 7.本地部署
 
-- git clone https://github.com/DonnieDing/heavenpool.git将项目代码克隆到本地。
+- git clone https://github.com/DonnieDing/heavenpool.git 将项目代码克隆到本地。
 - MySQL数据库中创建数据库heavenpool，然后导入项目sql目录下的heavenpool.sql文件。
 - 修改项目配置文件application.yml中的数据库相关配置，启动项目，访问localhost:8080即可。
 
