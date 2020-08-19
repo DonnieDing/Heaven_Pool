@@ -28,7 +28,7 @@ HeavenPool是使用SpringBoot开发的后台管理系统，基于Spring Security
 - 数据库连接池：Druid 1.1.14
 ## 6.数据库表
 
-![MySQL数据表](D:\IdeaProj\heavenpool\image\MySQL数据表.png)
+![MySQL数据表](https://github.com/DonnieDing/heavenpool/blob/master/image/MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8.png)
 
 ## 7.本地部署
 
