@@ -49,12 +49,12 @@ heaven_pool
 
 ## 7.数据库表
 
-![MySQL数据表](https://github.com/DonnieDing/heavenpool/blob/master/image/MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8.png)
+![MySQL数据表](https://github.com/DonnieDing/Heaven_Pool/blob/master/picture/heavenpool%E6%95%B0%E6%8D%AE%E5%BA%93.png)
 
 ## 8.本地部署
 
-- git clone https://github.com/DonnieDing/heaven_pool.git 将项目代码克隆到本地。
+- git clone https://github.com/DonnieDing/Heaven_Pool.git 将项目代码克隆到本地。
 - 本地安装启动Nacos和Redis。
 - MySQL数据库中创建数据库heavenpool，然后导入项目sql目录下的heavenpool.sql文件。
-- 修改项目配置文件application.yml中的Nacos、Redis和MySql相关配置，先启动网关Gateway项目，再启动其他的各子服务即可，访问http://localhost:8000/doc.html即可查看个服务接口文档，并进行接口调试。
+- 修改项目配置文件application.yml中的Nacos、Redis和MySql相关配置，先启动网关Gateway项目，再启动其他的各子服务即可，访问 http://localhost:8000/doc.html 即可查看个服务接口文档，并进行接口调试。
 - 因为使用了阿里云的短信服务和视频点播服务，所以msm的MsmServiceImpl中和vod的配置文件中，会有阿里云的keyid和keysecret等信息，此处需要自行去阿里云开通服务申请获取，填写自己申请的真实相关信息（此处需要具体查阅阿里云短信服务和视频点播服务相关的官网文档），不填写不影响其他接口服务功能。
