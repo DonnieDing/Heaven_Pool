@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.snow.dcl.umcservice.mapper.UmcUserMapper">
+
+    <select id="countRegisterByDay" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM umc_user uc
+        WHERE DATE(uc.gmt_create)=#{day}
+    </select>
+</mapper>

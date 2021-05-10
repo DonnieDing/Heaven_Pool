@@ -1,0 +1,47 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: heavenpool-edu
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/heavenpool?serverTimezone=GMT%2B8
+    username: root
+    password: Password@123
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 6000
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/snow/dcl/eduservice/mapper/xml/*.xml
+
+feign:
+  hystrix:
+    enabled: true # Feign是否启用断路器,默认为false
+
+hystrix:
+  command:
+    default:
+      execution:
+#        timeout:
+#          enabled: true # 为false则超时控制有ribbon控制，为true则hystrix超时和ribbon超时都使用，但是谁小谁生效，默认为true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000 # 熔断器的超时时长默认1秒，根据Feign调用关系，设置时长应该大于ribbon的(ReadTimeout+ConnectTimeout)*2
+
+ribbon:
+  ReadTimeout: 2000 # 处理请求的超时时间，默认为1秒
+  ConnectTimeout: 2000 # 连接建立的超时时长，默认1秒
+

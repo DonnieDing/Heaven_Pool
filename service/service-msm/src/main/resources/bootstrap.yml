@@ -1,0 +1,24 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: heavenpool-msm
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 6000
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/snow/dcl/msmservice/mapper/xml/*.xml

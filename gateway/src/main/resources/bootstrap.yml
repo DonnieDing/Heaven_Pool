@@ -1,0 +1,71 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: heavenpool-gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # 注册中心地址
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从nacos注册中心动态创建路由的功能，利用微服务名进行动态路由
+          lowerCaseServiceId: true
+      routes:
+        - id: heavenpool-edu # 路由的唯一标识，无固定规则但要求唯一
+          uri: lb://heavenpool-edu # 要转发的地址，匹配提供服务的路由地址
+          predicates:
+            - Path=/heavenpool-edu/** # 断言，路径匹配则进行路由转发
+          filters: # 过滤器，请求在传递过程中通过过滤器修改
+            - StripPrefix=1 # 去掉第一层前缀
+        - id: heavenpool-file
+          uri: lb://heavenpool-file
+          predicates:
+            - Path=/heavenpool-file/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-vod
+          uri: lb://heavenpool-vod
+          predicates:
+            - Path=/heavenpool-vod/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-cms
+          uri: lb://heavenpool-cms
+          predicates:
+            - Path=/heavenpool-cms/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-msm
+          uri: lb://heavenpool-msm
+          predicates:
+            - Path=/heavenpool-msm/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-umc
+          uri: lb://heavenpool-umc
+          predicates:
+            - Path=/heavenpool-umc/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-acl
+          uri: lb://heavenpool-acl
+          predicates:
+            - Path=/heavenpool-acl/**
+          filters:
+            - StripPrefix=1
+        - id: heavenpool-sta
+          uri: lb://heavenpool-sta
+          predicates:
+          - Path=/heavenpool-sta/**
+          filters:
+          - StripPrefix=1
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: debug

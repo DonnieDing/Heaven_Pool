@@ -1,0 +1,24 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: heavenpool-vod
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 200MB
+
+aliyun:
+  vod:
+    file:
+      keyid: xxxxxxxx
+      keysecret: xxxxxxxx
