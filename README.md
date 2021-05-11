@@ -29,23 +29,23 @@ Heaven_Pool是使用SpringCloud开发的在线视频课程平台，基于Spring 
 - API文档生成：knife4j 2.0.5
 ## 6.项目结构
 
-heaven_pool
-├── common -- 公共模块
-|    ├── common-base -- 通用处理
-|    ├── common-security -- 权限框架
-|    └── common-utils -- 通用工具类
-├── gateway -- 网关服务【端口:8000】
-├── picture -- github项目相关图片目录
-├── service -- 服务模块
-|    ├── service-acl -- 后台管理用户权限服务【端口:8001】
-|    ├── service-cms -- 内容管理服务【端口:8002】
-|    ├── service-edu -- 教育相关服务【端口:8003】
-|    ├── service-file -- 文件上传服务【端口:8004】
-|    ├── service-msm -- 短信服务【端口:8005】
-|    ├── service-sta -- 统计分析服务【端口:8006】
-|    ├── service-umc -- 前台用户服务【端口:8007】
-|    └── service-vod -- 阿里云视频点播服务【端口:8008】
-└── sql -- 数据库文件
+heaven_pool  
+├── common -- 公共模块  
+|    ├── common-base -- 通用处理  
+|    ├── common-security -- 权限框架  
+|    └── common-utils -- 通用工具类  
+├── gateway -- 网关服务【端口:8000】  
+├── picture -- github项目相关图片目录  
+├── service -- 服务模块  
+|    ├── service-acl -- 后台管理用户权限服务【端口:8001】  
+|    ├── service-cms -- 内容管理服务【端口:8002】  
+|    ├── service-edu -- 教育相关服务【端口:8003】  
+|    ├── service-file -- 文件上传服务【端口:8004】  
+|    ├── service-msm -- 短信服务【端口:8005】  
+|    ├── service-sta -- 统计分析服务【端口:8006】  
+|    ├── service-umc -- 前台用户服务【端口:8007】  
+|    └── service-vod -- 阿里云视频点播服务【端口:8008】  
+└── sql -- 数据库文件  
 
 ## 7.数据库表
 
