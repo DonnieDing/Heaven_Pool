@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2021-05-10 16:19:02
+Date: 2021-05-20 10:15:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -115,7 +115,6 @@ CREATE TABLE `acl_role` (
 -- ----------------------------
 INSERT INTO `acl_role` VALUES ('1', '系统管理员', null, null, '0', '2019-11-11 13:09:32', '2019-11-18 10:27:18');
 INSERT INTO `acl_role` VALUES ('1193757683205607426', '课程管理员', null, null, '0', '2019-11-11 13:09:45', '2019-11-18 10:25:44');
-INSERT INTO `acl_role` VALUES ('1387932235117731841', '测试角色', null, null, '0', '2021-04-30 08:50:06', '2021-04-30 08:50:06');
 
 -- ----------------------------
 -- Table structure for acl_role_permission
@@ -195,7 +194,6 @@ INSERT INTO `acl_role_permission` VALUES ('1196312704094867233', '11937576832056
 INSERT INTO `acl_role_permission` VALUES ('1196312704094867364', '1193757683205607426', '1195351159672246274', '0', '2021-02-20 16:41:57', '2021-02-20 16:42:00');
 INSERT INTO `acl_role_permission` VALUES ('1196312704094867457', '1', '1195354315093282817', '0', '2019-11-18 14:22:30', '2019-11-18 14:22:30');
 INSERT INTO `acl_role_permission` VALUES ('1196312704094867567', '1', '1195352054917074947', '0', '2021-05-10 15:10:28', '2021-05-10 15:10:31');
-INSERT INTO `acl_role_permission` VALUES ('1387932591503548417', '1387932235117731841', '1', '0', '2021-04-30 08:51:31', '2021-04-30 08:51:31');
 
 -- ----------------------------
 -- Table structure for acl_user
@@ -219,7 +217,7 @@ CREATE TABLE `acl_user` (
 -- Records of acl_user
 -- ----------------------------
 INSERT INTO `acl_user` VALUES ('1', 'admin', '$2a$10$0/E5EhjcDYUxm.WTuO0RpOsNlZGsHf3zdMEpI1zHiT8GWuFsAhY8G', 'admin', 'http://192.168.0.196:8002/archive/2020/12/28/0a0c4774-cdea-42b8-b219-4801dc72380e.gif', null, '0', '2019-11-01 10:39:47', '2019-11-01 10:39:47');
-INSERT INTO `acl_user` VALUES ('1362644652288671746', 'class_admin', '$2a$10$ZwcMZNPJ6uPzS60Rd09iye7P50RGm0uG/uJB9zHRaJd3X0rVCfM5W', 'nickname', 'http://192.168.0.196:8002/archive/2020/12/28/0a0c4774-cdea-42b8-b219-4801dc72380e.gif', null, '0', '2021-04-27 09:21:48', '2021-04-27 16:31:18');
+INSERT INTO `acl_user` VALUES ('1362644652288671746', 'class_admin', '$2a$10$ZwcMZNPJ6uPzS60Rd09iye7P50RGm0uG/uJB9zHRaJd3X0rVCfM5W', 'nickname', 'http://192.168.0.196:8002/archive/2020/12/28/0a0c4774-cdea-42b8-b219-4801dc72380e.gif', null, '0', '2021-04-27 09:21:48', '2021-05-19 10:17:17');
 INSERT INTO `acl_user` VALUES ('1381876564723011585', 'Dcl_Snow', '$2a$10$ZwcMZNPJ6uPzS60Rd09iye7P50RGm0uG/uJB9zHRaJd3X0rVCfM5W', '昵称', 'http://192.168.0.196:8002/archive/2020/12/28/0a0c4774-cdea-42b8-b219-4801dc72380e.gif', null, '0', '2021-04-13 15:47:02', '2021-04-13 15:47:02');
 
 -- ----------------------------
@@ -535,7 +533,7 @@ INSERT INTO `statistics_daily` VALUES ('1292669328344342531', '2020-08-07', '12'
 INSERT INTO `statistics_daily` VALUES ('1292669399337132032', '2020-08-08', '9', '141', '152', '190', '2021-01-22 15:16:32', '2021-01-22 15:16:35');
 INSERT INTO `statistics_daily` VALUES ('1292669399337132033', '2020-08-10', '3', '150', '161', '151', '2020-08-10 11:49:36', '2020-08-10 11:49:36');
 INSERT INTO `statistics_daily` VALUES ('1363676164769464322', '2020-08-06', '2', '0', '0', '0', '2021-02-22 10:25:08', '2021-02-22 10:25:08');
-INSERT INTO `statistics_daily` VALUES ('1382242764137205762', '2020-08-09', '4', '0', '0', '0', '2021-04-14 16:02:10', '2021-04-14 16:02:10');
+INSERT INTO `statistics_daily` VALUES ('1391940696860065793', '2020-08-09', '0', '0', '0', '0', '2021-05-11 10:18:18', '2021-05-11 10:18:18');
 
 -- ----------------------------
 -- Table structure for umc_user

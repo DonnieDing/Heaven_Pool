@@ -56,7 +56,7 @@ public class MsmServiceImpl implements MsmService {
         Map<String, String> param = new HashMap<>();
         param.put("code", code);
 
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "xxxxxxxx", "xxxxxxxx");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "********", "********");
         IAcsClient client = new DefaultAcsClient(profile);
 
         CommonRequest request = new CommonRequest();
@@ -66,8 +66,8 @@ public class MsmServiceImpl implements MsmService {
         request.setSysAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
         request.putQueryParameter("PhoneNumbers", telephoneNum);
-        request.putQueryParameter("SignName", "xxxxxxxx");
-        request.putQueryParameter("TemplateCode", "xxxxxxxx");
+        request.putQueryParameter("SignName", "********");
+        request.putQueryParameter("TemplateCode", "********");
         request.putQueryParameter("TemplateParam", JSONObject.toJSONString(param));
         try {
             CommonResponse response = client.getCommonResponse(request);

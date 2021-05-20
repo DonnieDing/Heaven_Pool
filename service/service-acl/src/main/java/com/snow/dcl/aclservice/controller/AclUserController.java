@@ -78,6 +78,7 @@ public class AclUserController {
     public ResponseResult selectUser(@PathVariable long page, @PathVariable long limit, @RequestBody AclUser aclUser) {
         Page<AclUser> aclUserPage = new Page<>(page, limit);
         QueryWrapper<AclUser> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("id", "username", "nick_name", "salt");
         if (!StringUtils.isEmpty(aclUser.getUsername())) {
             queryWrapper.like("username", aclUser.getUsername());
         }
@@ -92,7 +93,6 @@ public class AclUserController {
     @GetMapping("/selectUserById/{userId}")
     public ResponseResult selectUserById(@PathVariable String userId) {
         final AclUser aclUser = aclUserService.getById(userId);
-        aclUser.setPassword("");
         return ResponseResult.ok().data("aclUser", aclUser);
     }
 
