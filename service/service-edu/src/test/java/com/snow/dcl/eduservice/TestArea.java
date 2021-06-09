@@ -32,10 +32,6 @@ public class TestArea {
         }
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
-        // 1. 11471 1149656
-        // 2. 1069  83609
-        // 3. 111   3417
-        // 4. 16    187
 
     }
 
