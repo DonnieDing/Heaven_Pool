@@ -64,17 +64,23 @@ heaven_pool
 
 ## 7.数据库表
 
-![MySQL数据表](https://gitee.com/Dcl_Snow/Heaven_Pool/blob/master/picture/heavenpool%E6%95%B0%E6%8D%AE%E5%BA%93.png)
+![MySQL数据表](https://gitee.com/Dcl_Snow/Heaven_Pool/raw/master/picture/heavenpool%E6%95%B0%E6%8D%AE%E5%BA%93.png)
 
 ## 8.本地部署
 
-- git clone https://gitee.com/Dcl_Snow/Heaven_Pool.git 将项目代码克隆到本地。
-- 本地安装启动Nacos和Redis。
-启动Nacos服务：
-![Nacos服务](https://gitee.com/Dcl_Snow/Heaven_Pool/blob/master/picture/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83.png)
-启动Redis服务：
-![Redis服务](https://gitee.com/Dcl_Snow/Heaven_Pool/blob/master/picture/Redis.png)
-- MySQL数据库中创建数据库heavenpool，然后导入项目sql目录下的heavenpool.sql文件。
-- 修改项目配置文件application.yml中的Nacos、Redis和MySql相关配置，先启动网关Gateway项目，再启动其他的各子服务即可，访问http://localhost:8000/doc.html 即可查看个服务接口文档，并进行接口调试。
-接口文档：
-![接口文档](https://gitee.com/Dcl_Snow/Heaven_Pool/blob/master/picture/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.png)
+1.git clone https://gitee.com/Dcl_Snow/Heaven_Pool.git 将项目代码克隆到本地。
+
+2.本地安装启动Nacos和Redis。
+
+- 启动Nacos服务：
+![Nacos服务](https://gitee.com/Dcl_Snow/Heaven_Pool/raw/master/picture/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83.png)
+
+- 启动Redis服务：
+![Redis服务](https://gitee.com/Dcl_Snow/Heaven_Pool/raw/master/picture/Redis.png)
+
+3.MySQL数据库中创建数据库heavenpool，然后导入项目sql目录下的heavenpool.sql文件。
+
+4.修改项目配置文件application.yml中的Nacos、Redis和MySql相关配置，先启动网关Gateway项目，再启动其他的各子服务即可，访问http://localhost:8000/doc.html 即可查看个服务接口文档，并进行接口调试。
+
+- 接口文档：
+![接口文档](https://gitee.com/Dcl_Snow/Heaven_Pool/raw/master/picture/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.png)
