@@ -30,6 +30,7 @@ Heaven_Pool是使用SpringCloud开发的在线视频课程平台，基于Spring 
 ## 6.项目结构
 
 heaven_pool
+
 ├── common -- 公共模块
 
 |    ├── common-base -- 通用处理
